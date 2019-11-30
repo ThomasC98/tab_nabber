@@ -1,0 +1,18 @@
+{
+  "name": "Tab Nab Detector",
+  "version": "0.1",
+  "description": "Notify users if a tab were to be changed without their knowledge",
+  "background": {
+    "scripts": [ "resemble/resemble.js", "background.js", "grabTable.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "warn/noWarn.png",
+    "default_title": "Protect your Tabs"
+  },
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ],
+  "manifest_version": 2
+}
