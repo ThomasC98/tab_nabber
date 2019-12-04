@@ -73,8 +73,6 @@ chrome.tabs.onActivated.addListener(function(tab) {
 // If the page has already been SC before we put the old photo in a map
 // We store the current SC url within a map
 function takePhoto(id) {
-  photoDiff = null;
-  percentChange = 0;
   return new Promise((resolve, reject) => {
     chrome.tabs.captureVisibleTab(function(scURL) {
       photoInProgress = true;
