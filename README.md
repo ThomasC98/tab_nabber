@@ -1,5 +1,7 @@
 Team Name: CHEAT CODE
+
 Team Members: Thomas Clarke, Tamieem Jaffary, Jessica Guan, Mo Jahan
+
 Team Project: Tab Nabber
 
 Welcome to Tab-Nabber!
@@ -47,9 +49,3 @@ HOW TO RUN LOCAL SERVER:
 
 If testing is warranted then run a local server of the 'tab_nab_test'
 This is an example website that changes data when a user leaves it
-
-Written by Team CHEAT CODE:
-Thomas Clarke
-Tamieem Jaffary
-Jessica Guan
-Mo Jahan
