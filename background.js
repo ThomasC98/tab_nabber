@@ -23,7 +23,7 @@ resemble.outputSettings({
   outputDiff: true
 });
 
-// takes a photo of the page if it's completed loading
+// Takes a photo of the page if it's completed loading
 // if not then it waits 3 seconds and then takes a photo
 // We then reset the timeout function
 chrome.tabs.onActivated.addListener(function(tab) {
@@ -73,6 +73,8 @@ chrome.tabs.onActivated.addListener(function(tab) {
 // If the page has already been SC before we put the old photo in a map
 // We store the current SC url within a map
 function takePhoto(id) {
+  photoDiff = null;
+  percentChange = 0;
   return new Promise((resolve, reject) => {
     chrome.tabs.captureVisibleTab(function(scURL) {
       photoInProgress = true;
@@ -218,38 +220,3 @@ function makeImages() {
     })
   }
 }
-// Info on displaying such changes
-//var viewTabUrl = chrome.extension.getURL('screenshot.html?id=' + id++)
-//var targetId = null;
-// chrome.tabs.onUpdated.addListener(function listener(tabId, changedProps)
-// {
-//   // We are waiting for the tab we opened to finish loading.
-//   // Check that the tab's id matches the tab we opened,
-//   // and that the tab is done loading.
-//   if (tabId != targetId || changedProps.status != "complete")
-//     return;
-
-//   // Passing the above test means this is the event we were waiting for.
-//   // There is nothing we need to do for future onUpdated events, so we
-//   // use removeListner to stop getting called when onUpdated events fire.
-//   chrome.tabs.onUpdated.removeListener(listener);
-
-//   // Look through all views to find the window which will display
-//   // the screenshot.  The url of the tab which will display the
-//   // screenshot includes a query parameter with a unique id, which
-//   // ensures that exactly one view will have the matching URL.
-//   var views = chrome.extension.getViews();
-//   for (var i = 0; i < views.length; i++)
-//   {
-//     var view = views[i];
-//     if (view.location.href == viewTabUrl)
-//     {
-//       view.setScreenshotUrl(screenshotUrl);
-//       break;
-//     }
-//   }
-// });
-
-// chrome.tabs.create({url: viewTabUrl}, function(tab) {
-//   targetId = tab.id;
-// });

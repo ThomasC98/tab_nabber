@@ -1,3 +1,7 @@
+Team Name: CHEAT CODE
+Team Members: Thomas Clarke, Tamieem Jaffary, Jessica Guan, Mo Jahan
+Team Project: Tab Nabber
+
 Welcome to Tab-Nabber!
 
 This extension is to help protect you against malicious website code.
